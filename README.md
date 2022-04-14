@@ -1,5 +1,6 @@
 ## 注意事项
 XxlJobAdminConfig类实现了InitializingBean的afterPropertiesSet方法，在spring容器加载实例时，会执行afterPropertiesSet方法进行初始化操作，调用了XxlJobScheduler的init方法，在init方法内启动多个相关的监听线程。
+实现了DisposableBean接口的destroy方法，在config类销毁时，会执行destroy方法，destroy方法调用了多个相关线程类的停止方法，将多个运行的监听线程停止掉。
 
 <p align="center" >
     <img src="https://www.xuxueli.com/doc/static/xxl-job/images/xxl-logo.jpg" width="150">
