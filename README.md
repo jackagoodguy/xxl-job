@@ -1,3 +1,6 @@
+## 注意事项
+XxlJobAdminConfig类实现了InitializingBean的afterPropertiesSet方法，在spring容器加载实例时，会执行afterPropertiesSet方法进行初始化操作，调用了XxlJobScheduler的init方法，在init方法内启动多个相关的监听线程。
+
 <p align="center" >
     <img src="https://www.xuxueli.com/doc/static/xxl-job/images/xxl-logo.jpg" width="150">
     <h3 align="center">XXL-JOB</h3>
